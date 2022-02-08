@@ -1,0 +1,388 @@
+﻿.active-table-container:focus {
+    outline: 1px solid #0075DB;
+}
+
+table.active-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+@media print {
+    table.active-table th {
+        padding: 0 !important;
+        height: auto !important;
+    }
+
+    table.active-table td {
+        padding: 0 !important;
+        height: auto !important;
+    }
+}
+
+table.active-table:focus, table.active-table.focused {
+    outline: 1px solid #0075DB;
+}
+
+table.active-table thead tr th.width-small {
+    width: 10%;
+}
+
+table.active-table thead tr th.width-medium {
+    width: 20%;
+}
+
+table.active-table thead tr th.width-large {
+    width: 30%;
+}
+
+table.active-table thead tr th {
+    font: bold 16px Verdana;
+    color: #333;
+    background-color: transparent;
+    height: 1.9em;
+    line-height: 1.9em;
+    vertical-align: middle;
+    z-index: 1;
+    text-transform: capitalize;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+table.active-table thead tr th.orderable:hover:not(.tick-cell):not(.view-cell):not(.options-cell):not(.info-cell):not(.order-cell) {
+    background-color: #CADEF7;
+    cursor: pointer;
+}
+
+table.active-table thead tr th.headerSortUp, table.active-table thead tr th.headerSortDown {
+    background-color: #CADEF7;
+    vertical-align: middle;
+}
+
+table.active-table thead tr th.headerSortUp .header-text, table.active-table thead tr th.headerSortDown .header-text {
+    width: calc(100% - 20px);
+}
+
+table.active-table thead tr th.headerSortUp:after, table.active-table thead tr th.headerSortDown:after {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 10px);
+}
+
+table.active-table thead tr th.headerSortUp:after {
+    font-size: 20px;
+}
+
+table.active-table thead tr th:focus {
+    outline: none;
+}
+
+table.active-table thead tr th:focus-visible {
+    outline: 1px solid #0075DB;
+    outline-offset: -1px;
+}
+
+table.active-table thead tr th.headerSortDown:after {
+    font-size: 20px;
+}
+
+table.active-table thead tr th.active-table-edit-column {
+    width: 25px;
+    padding: 0;
+}
+
+table.active-table thead tr th.active-table-edit-column .active-table-config-icon {
+    cursor: pointer;
+    padding: 0;
+    height: 1.9em;
+    line-height: 1.9em;
+}
+
+table.active-table thead tr th.align-left {
+    text-align: left;
+}
+
+table.active-table thead tr th.align-center {
+    text-align: center;
+}
+
+table.active-table thead tr th.align-right {
+    text-align: right;
+}
+
+table.active-table thead.hide-header tr th {
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+table.active-table thead.hide-header tr th * {
+    padding: 0 !important;
+    height: 0 !important;
+    display: none !important;
+}
+
+table.active-table tbody.clickable tr:hover {
+    cursor: pointer;
+}
+
+table.active-table tbody.clickable tr:hover:not(.selected) {
+    color: #333;
+    background-color: #EEEEEE;
+}
+
+table.active-table tbody.clickable tr:hover:not(.selected) > td {
+    color: inherit;
+    background-color: inherit;
+}
+
+table.active-table tbody.clickable tr:hover > td {
+    cursor: pointer;
+}
+
+table.active-table tbody.clickable tr:hover span {
+    cursor: pointer;
+}
+
+table.active-table tbody.has-breakdown tr:not(.selected) {
+    background-color: #ffffff;
+}
+
+table.active-table tbody.has-breakdown tr.has-breakdown td {
+    padding: 20px;
+}
+
+table.active-table tbody.has-breakdown tr.has-breakdown:not(.breakdown-after-row) td {
+    padding-top: 5px;
+}
+
+table.active-table tbody.has-breakdown tr.has-breakdown.breakdown-after-row td {
+    padding-bottom: 5px;
+}
+
+table.active-table tbody.has-breakdown tr.is-breakdown {
+    color: #767676;
+}
+
+table.active-table tbody.has-breakdown tr.is-breakdown td {
+    padding: 5px 20px;
+    height: 40px;
+}
+
+table.active-table tbody.has-breakdown tr.is-breakdown:not(.breakdown-after-row) td {
+    border-bottom: none;
+}
+
+table.active-table tbody.has-breakdown tr.is-breakdown.breakdown-after-row td {
+    border-top: none;
+}
+
+table.active-table tbody:not(.has-breakdown) tr:not(.selected):nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table.active-table tbody:not(.has-breakdown) tr:not(.selected):nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+table.active-table tbody tr:focus, table.active-table tbody tr.focused {
+    outline: 1px solid #0075DB;
+}
+
+table.active-table tbody tr.selected {
+    color: #333;
+    background-color: #ddd;
+}
+
+table.active-table tbody tr td {
+    font: normal 12px Verdana;
+}
+
+table.active-table tbody tr td span {
+    font: inherit;
+}
+
+@media (min-width: 501px) {
+    table.active-table tbody tr > td.align-left {
+        text-align: left;
+    }
+
+    table.active-table tbody tr > td.align-center {
+        text-align: center;
+    }
+
+    table.active-table tbody tr > td.align-right {
+        text-align: right;
+    }
+
+    table.active-table tbody tr > div {
+        text-align: inherit;
+    }
+}
+
+table.active-table tbody tr td:not(.appointment-button.align-left), table.active-table tfoot tr td:not(.appointment-button.align-left) {
+    border-bottom: 1px solid #ddd;
+}
+
+table.active-table tbody tr td, table.active-table tfoot tr td {
+    height: 70px;
+    padding: 20px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+table.active-table tbody tr td span, table.active-table tfoot tr td span {
+    width: auto;
+}
+
+table.active-table tbody tr.break-word, table.active-table tfoot tr.break-word {
+    word-wrap: break-word;
+}
+
+table.active-table tbody.has-breakdown.breakdown-after-row tr td, table.active-table tfoot.has-breakdown.breakdown-after-row tr td {
+    border-bottom: none;
+    border-top: 1px solid #ddd;
+}
+
+table.active-table tbody.has-breakdown.breakdown-after-row tr:first-child td, table.active-table tfoot.has-breakdown.breakdown-after-row tr:first-child td {
+    border-top: none;
+}
+
+table.active-table tbody.has-breakdown.breakdown-after-row tr:last-child td, table.active-table tfoot.has-breakdown.breakdown-after-row tr:last-child td {
+    border-bottom: 1px solid #ddd;
+}
+
+table.active-table tfoot tr {
+    color: #333;
+    background-color: transparent;
+}
+
+table.active-table tfoot tr.padded td {
+    padding: 20px;
+}
+
+table.active-table tfoot tr td {
+    font: normal 12px Verdana;
+}
+
+table.active-table tfoot tr td .footer-label {
+    display: block;
+    text-align: right;
+    vertical-align: middle;
+}
+
+table.active-table tr td.tick-cell, table.active-table tr th.tick-cell {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+
+table.active-table.mobile th {
+    padding-left: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+table.active-table.mobile tr {
+    background-color:#fff !important;
+}
+
+table.active-table.mobile tr[data-item="2"],
+table.active-table.mobile tr[data-item="4"],
+table.active-table.mobile tr[data-item="6"],
+table.active-table.mobile tr[data-item="8"] {
+    background-color: #f7f7f7 !important;
+}
+
+/*
+@media only screen and (min-width: 501px) {
+    table .active-table td.appointment-button.align-left {
+        border-bottom: 1px solid #ddd;
+        width: auto;
+        display: table-cell;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    table.active-table {
+        border: 0;
+    }
+
+    table.active-table thead {
+        display: none;
+    }
+
+    table.active-table thead.has-breakdown tr.is-breakdown, table.active-table tfoot.has-breakdown tr.is-breakdown, table.active-table tbody.has-breakdown tr.is-breakdown {
+        margin: 0;
+    }
+
+    table.active-table thead.has-breakdown tr.is-breakdown td, table.active-table tfoot.has-breakdown tr.is-breakdown td, table.active-table tbody.has-breakdown tr.is-breakdown td {
+        height: auto;
+        border-bottom: none;
+        border-top: none;
+    }
+
+    table.active-table thead.has-breakdown tr.has-breakdown, table.active-table tfoot.has-breakdown tr.has-breakdown, table.active-table tbody.has-breakdown tr.has-breakdown {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    table.active-table thead.has-breakdown tr.has-breakdown td, table.active-table tfoot.has-breakdown tr.has-breakdown td, table.active-table tbody.has-breakdown tr.has-breakdown td {
+        padding: 20px;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+        border-top: none;
+    }
+
+    table.active-table thead tr, table.active-table tfoot tr, table.active-table tbody tr {
+        margin-bottom: 10px;
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+    }
+
+    table.active-table thead tr:first-child, table.active-table tfoot tr:first-child, table.active-table tbody tr:first-child {
+        margin-top: 10px;
+    }
+
+    table.active-table thead tr:not(.selected):nth-child(even), table.active-table thead tr:not(.selected):nth-child(odd), table.active-table tfoot tr:not(.selected):nth-child(even), table.active-table tfoot tr:not(.selected):nth-child(odd), table.active-table tbody tr:not(.selected):nth-child(even), table.active-table tbody tr:not(.selected):nth-child(odd) {
+        background-color: transparent;
+    }
+
+    table.active-table thead tr td:not(.appointment-button.align-left), table.active-table tfoot tr td:not(.appointment-button.align-left), table.active-table tbody tr td:not(.appointment-button.align-left) {
+        border-bottom: 1px solid #ddd;
+        display: block;
+    }
+
+    table.active-table thead tr td, table.active-table tfoot tr td, table.active-table tbody tr td {
+        font: normal 12px Verdana;
+        text-align: right;
+        border-top: none;
+        vertical-align: middle;
+        height: auto;
+    }
+
+    table.active-table thead tr td:last-child, table.active-table tfoot tr td:last-child, table.active-table tbody tr td:last-child {
+        border-bottom: 0;
+    }
+
+    table.active-table thead tr td:before, table.active-table tfoot tr td:before, table.active-table tbody tr td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: capitalize;
+        font: bold 16px Verdana;
+        color: #333;
+    }
+
+    table.active-table thead tr td:empty, table.active-table tfoot tr td:empty, table.active-table tbody tr td:empty {
+        display: none;
+    }
+
+    table.active-table tfoot td {
+        border-bottom: 0;
+    }
+}*/
+
+.custom-table-config-handle .active-table-edit-column {
+    display: none;
+}
